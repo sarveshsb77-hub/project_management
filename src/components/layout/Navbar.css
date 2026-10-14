@@ -1,0 +1,160 @@
+ .navbar {
+  position: fixed;          /* fixed instead of sticky */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  z-index: 1000;            /* high z-index to stay on top */
+}
+
+/* ... rest of your existing styles ... */
+
+.menu-toggle {
+  display: none;
+  margin-right: 1rem;
+}
+@media (max-width: 768px) { .menu-toggle { display: block; } }
+
+.page-title { font-size: 1.25rem; font-weight: 600; color: var(--text); }
+
+.navbar-right { 
+  display: flex; 
+  align-items: center; 
+  gap: 1rem; 
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  background: var(--background);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+.search-box input {
+  border: none;
+  background: transparent;
+  padding: 0.2rem 0.5rem;
+  outline: none;
+  color: var(--text);
+  width: 180px;
+}
+
+.nav-actions { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem; 
+}
+.icon-btn {
+  padding: 0.5rem;
+  border-radius: 50%;
+  position: relative;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+.icon-btn:hover { background: var(--background); color: var(--text); }
+.badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: var(--danger);
+  color: #fff;
+  font-size: 0.6rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 50%;
+}
+
+/* Updated user-profile – no background, no arrow, clean spacing */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.25rem 0;           /* removed horizontal padding, only vertical */
+  border-radius: 0;             /* remove rounded corners */
+  background: transparent;      /* no grey background */
+  cursor: default;              /* no pointer (optional) */
+}
+
+.avatar-small {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 1.2;
+}
+.user-details .user-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* Remove any leftover chevron styles if present */
+.chevron {
+  display: none;
+}
+
+.theme-menu-wrapper, .notif-wrapper { position: relative; }
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 0.5rem 0;
+  min-width: 150px;
+  z-index: 10;
+}
+.dropdown button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  color: var(--text);
+  transition: var(--transition);
+}
+.dropdown button:hover { background: var(--background); }
+
+.notif-dropdown { min-width: 280px; }
+.notif-header {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+.notif-item {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.notif-item p { font-size: 0.9rem; margin-bottom: 0.2rem; }
+.notif-item span { font-size: 0.75rem; color: var(--text-muted); }
+
+@media (max-width: 768px) {
+  .hide-mobile { display: none !important; }
+  .page-title { font-size: 1rem; }
+}

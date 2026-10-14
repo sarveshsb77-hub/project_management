@@ -1,0 +1,42 @@
+ :root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --primary-light: #eef2ff;
+  --sidebar: #0f172a;
+  --sidebar-hover: #1e293b;
+  --sidebar-text: #94a3b8;
+  --sidebar-active: #6366f1;
+  --background: #f1f5f9;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --success: #22c55e;
+  --warning: #eab308;
+  --danger: #ef4444;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+  /* Blue‑based dark theme – navy backgrounds, bright blue accents */
+  --primary: #4f8cf7;                 /* bright blue instead of indigo */
+  --primary-dark: #3a7bd5;
+  --primary-light: #1a3a5c;
+
+  --sidebar: #0b1a2e;                 /* very dark navy */
+  --sidebar-hover: #132a45;
+  --sidebar-text: #8ab4f8;            /* light blue text */
+  --sidebar-active: #4f8cf7;
+
+  --background: #0b1a2e;              /* main background – deep navy */
+  --card: #132a45;                    /* card background – dark blue */
+  --border: #1e3a5f;                  /* blue borders */
+  --text: #e8f0fe;                    /* bright white‑blue text */
+  --text-muted: #8ab4f8;              /* muted light blue */
+  --shadow: 0 1px 3px rgba(0,0,0,0.5);
+  --success: #22c55e;
+  --warning: #eab308;
+  --danger: #ef4444;
+}
